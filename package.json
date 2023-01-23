@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Experimenting with Playwright",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "run_all": "npx playwright test",
+    "run_2": "npx playwright test tests/2.spec.ts"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/siddharth2023/playwrightExperiments.git"
