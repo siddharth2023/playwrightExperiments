@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 import os from "os";
 
-test.use({ headless: false });
+// test.use({ headless: false });
 
 test("has title", async ({ page }) => {
   const type = os.type(); // "Windows_NT"
