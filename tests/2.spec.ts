@@ -1,7 +1,9 @@
 import { test, expect } from "@playwright/test";
 import os from "os";
+import uaParser from "ua-parser-js";
 
 // test.use({ headless: false });
+let userAgentInfo;
 
 test("has title 2", async ({ page }) => {
   const type = os.type(); // "Windows_NT"
@@ -18,6 +20,10 @@ test("has title 2", async ({ page }) => {
 
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(/Playwright/);
+  const getUA = await page.evaluate(() => navigator.userAgent);
+  userAgentInfo = uaParser(getUA);
+  const browserName = userAgentInfo.browser.name;
+  console.log(`Browser name: ${browserName}`);
 });
 
 test("get started link 2", async ({ page }) => {

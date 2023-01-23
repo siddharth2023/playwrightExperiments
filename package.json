@@ -16,7 +16,8 @@
   },
   "homepage": "https://github.com/siddharth2023/playwrightExperiments#readme",
   "devDependencies": {
-    "@playwright/test": "^1.29.2"
+    "@playwright/test": "^1.29.2",
+    "ua-parser-js": "^0.7.33"
   },
   "dependencies": {
     "@types/node": "^18.11.18"
