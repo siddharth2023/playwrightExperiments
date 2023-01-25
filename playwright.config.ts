@@ -33,14 +33,6 @@ const config: PlaywrightTestConfig = {
   // reporter: 'html',
   reporter: [
     ['html', { open: 'never', outputFolder: 'test-results/html' }],
-    ['list'],
-    ['allure-playwright', { outputFolder: 'allure-results' }],
-    [
-        'json',
-        {
-            outputFile: process.env.PW_RESULTS_FILENAME,
-        },
-    ],
 ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
