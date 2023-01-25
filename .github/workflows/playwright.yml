@@ -27,6 +27,8 @@ jobs:
       - name: Run Playwright tests
         # run: npm run run_2
         run: npx playwright test
+      - name: Get directory structure
+        run: ls
       - uses: actions/upload-artifact@v3
         if: always()
         with:
