@@ -24,6 +24,8 @@ jobs:
         run: npm ci
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
+      - name: Get directory structure
+        run: ls
       - name: Run Playwright tests
         # run: npm run run_2
         run: npx playwright test tests/demo-todo-app.spec.ts
