@@ -30,4 +30,15 @@ test.describe("Describe block", () => {
 
     await computersPage.assertNewComputerAdded();
   });
+
+  test("basic test with POM 2", async ({ page }) => {
+    computersPage = new ComputersPage(page);
+    addComputerPage = new AddComputerPage(page);
+    await computersPage.goto();
+    await computersPage.clickAddNewComputer();
+
+    await addComputerPage.addNewComputer();
+
+    await computersPage.assertNewComputerAdded();
+  });
 });
