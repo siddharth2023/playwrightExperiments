@@ -6,38 +6,24 @@ test.describe("Describe block", () => {
   let computersPage;
   let addComputerPage;
 
-  test("basic test", async ({ page }) => {
-    await page.goto("https://computer-database.gatling.io/computers");
-    await page.getByText("Add a new computer").click();
-    await page.locator("#name").fill("CommitQuality");
-    await page.locator("#introduced").fill("1999-12-12");
-    await page.locator("#introduced").fill("1999-12-12");
-    await page.locator("#discontinued").fill("2000-12-12");
-    await page.locator("#company").selectOption({ label: "Apple Inc." });
-    await page.getByText("Create this computer").click();
-    await expect(
-      page.getByText("Done ! Computer CommitQuality has been created")
-    ).toBeVisible();
-  });
+  // test("basic test with POM", async ({ page }) => {
+  //   computersPage = new ComputersPage(page);
+  //   addComputerPage = new AddComputerPage(page);
+  //   await computersPage.goto();
+  //   await computersPage.clickAddNewComputer();
 
-  test("basic test with POM", async ({ page }) => {
-    computersPage = new ComputersPage(page);
-    addComputerPage = new AddComputerPage(page);
-    await computersPage.goto();
-    await computersPage.clickAddNewComputer();
+  //   await addComputerPage.addNewComputer();
 
-    await addComputerPage.addNewComputer();
-
-    await computersPage.assertNewComputerAdded();
-  });
+  //   await computersPage.assertNewComputerAdded();
+  // });
 
   test("basic test with POM 2", async ({ page }) => {
-    computersPage = new ComputersPage(page);
-    addComputerPage = new AddComputerPage(page);
-    await computersPage.goto();
-    await computersPage.clickAddNewComputer();
+    const computersPage2 = new ComputersPage(page);
+    const addComputerPage2 = new AddComputerPage(page);
+    await computersPage2.goto();
+    await computersPage2.clickAddNewComputer();
 
-    await addComputerPage.addNewComputer();
+    await addComputerPage2.addNewComputer();
 
     await computersPage.assertNewComputerAdded();
   });
