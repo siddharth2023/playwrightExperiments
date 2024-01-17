@@ -24,12 +24,12 @@
   },
   "homepage": "https://github.com/siddharth2023/playwrightExperiments#readme",
   "devDependencies": {
-    "@playwright/test": "^1.39.0",
+    "@playwright/test": "^1.41.0",
     "ua-parser-js": "^1.0.37"
   },
   "dependencies": {
-    "@types/node": "^20.9.0",
-    "axios": "^1.6.2",
+    "@types/node": "^20.11.5",
+    "axios": "^1.6.5",
     "dotenv": "^16.3.1"
   }
 }
