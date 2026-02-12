@@ -110,3 +110,4 @@ dist
 /playwright-report/
 /playwright/.cache/
 auth.json
+extensions/
